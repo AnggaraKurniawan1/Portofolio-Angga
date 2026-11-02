@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Code, Server, Cpu, Network, CheckCircle, Sparkles, Layers } from 'lucide-react';
+import { Code, Server, Layers, Network, CheckCircle, Sparkles, TrendingUp } from 'lucide-react';
 
 export default function Skills() {
   const { skillCategories } = portfolioData;
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const categoryIcons = [Code, Server, Cpu, Network];
+  const categoryIcons = [Code, Server, TrendingUp, Network];
 
   const filteredCategories = activeCategory === 'all' 
     ? skillCategories 
@@ -25,7 +25,7 @@ export default function Skills() {
             Keahlian Teknis & Alat
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-400">
-            Spektrum keahlian teknis teruji dari perancangan antarmuka, rekayasa backend, pemrograman mikrokontroler, hingga operasional infrastruktur jaringan.
+            Spektrum keahlian teknis teruji dari perancangan antarmuka, rekayasa backend, analisis proses bisnis, hingga operasional infrastruktur jaringan.
           </p>
         </div>
 
@@ -91,13 +91,7 @@ export default function Skills() {
                           {skill.name}
                         </span>
                       </div>
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider ${
-                        skill.level === 'Expert'
-                          ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800'
-                          : skill.level === 'Advanced'
-                          ? 'bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800'
-                          : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700'
-                      }`}>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
                         {skill.level}
                       </span>
                     </div>

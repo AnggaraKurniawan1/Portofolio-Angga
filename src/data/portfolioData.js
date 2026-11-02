@@ -5,11 +5,11 @@ export const portfolioData = {
     role: "Information Systems Specialist & Software Engineer",
     subRoles: [
       "Full-stack Web Developer",
-      "IoT & Smart Systems Builder",
+      "System & Data Analyst",
       "IT Support & Infrastructure Engineer",
-      "System & Data Analyst"
+      "Database & System Administrator"
     ],
-    bio: "Lulusan S1 Sistem Informasi Institut Teknologi Kalimantan (IPK 3.63). Berpengalaman dalam merancang arsitektur sistem informasi enterprise (Laravel & Vue.js/React), sistem monitoring IoT hemat energi, dan infrastruktur IT jaringan/server lapangan berkeandalan tinggi.",
+    bio: "Lulusan S1 Sistem Informasi Institut Teknologi Kalimantan (IPK 3.63). Berpengalaman dalam merancang arsitektur sistem informasi enterprise (Laravel & Vue.js/React), analisis kebutuhan sistem, dan infrastruktur IT jaringan/server lapangan berkeandalan tinggi.",
     location: "Balikpapan, Kalimantan Timur, Indonesia",
     email: "anggarabppn@gmail.com",
     phone: "+62 878-7246-2520",
@@ -35,8 +35,8 @@ export const portfolioData = {
       skills: [
         { name: "React.js", level: "Advanced", icon: "Code" },
         { name: "Vue.js", level: "Advanced", icon: "Code" },
-        { name: "Tailwind CSS", level: "Expert", icon: "Layout" },
-        { name: "HTML5 & Modern CSS3", level: "Expert", icon: "Layers" },
+        { name: "Tailwind CSS", level: "Advanced", icon: "Layout" },
+        { name: "HTML5 & Modern CSS3", level: "Advanced", icon: "Layers" },
         { name: "JavaScript (ES6+)", level: "Advanced", icon: "Code" }
       ]
     },
@@ -47,19 +47,19 @@ export const portfolioData = {
         { name: "Laravel (PHP)", level: "Advanced", icon: "Server" },
         { name: "MySQL / Relational DB", level: "Advanced", icon: "Database" },
         { name: "RESTful API Design", level: "Advanced", icon: "Globe" },
-        { name: "PHPUnit Automated Testing", level: "Intermediate", icon: "CheckCircle" },
+        { name: "PHPUnit Automated Testing", level: "Advanced", icon: "CheckCircle" },
         { name: "MVC Architecture", level: "Advanced", icon: "Layers" }
       ]
     },
     {
-      title: "IoT & Embedded Systems",
-      description: "Integrasi sensor fisik, mikrokontroler, dan pengolahan data telemetri.",
+      title: "System Analysis & Data Analytics",
+      description: "Analisis proses bisnis, perancangan basis data, dan visualisasi data.",
       skills: [
-        { name: "Arduino UNO", level: "Advanced", icon: "Cpu" },
-        { name: "ESP8266 Wi-Fi Module", level: "Advanced", icon: "Wifi" },
-        { name: "PZEM-004T (Energy Meter)", level: "Advanced", icon: "Zap" },
-        { name: "DHT11 Sensor & Telemetri", level: "Advanced", icon: "Activity" },
-        { name: "Hardware Prototyping", level: "Intermediate", icon: "Cpu" }
+        { name: "System Requirements & User Stories", level: "Advanced", icon: "FileText" },
+        { name: "Data Analytics & Reporting", level: "Advanced", icon: "TrendingUp" },
+        { name: "Database Modeling (ERD)", level: "Advanced", icon: "Database" },
+        { name: "UI/UX Prototyping (Figma)", level: "Advanced", icon: "Figma" },
+        { name: "Personal Extreme Programming (PXP)", level: "Advanced", icon: "Code" }
       ]
     },
     {
@@ -69,8 +69,8 @@ export const portfolioData = {
         { name: "Router & Switch Config", level: "Advanced", icon: "Network" },
         { name: "Local Server Deployment", level: "Advanced", icon: "Server" },
         { name: "Hardware Troubleshooting", level: "Advanced", icon: "Wrench" },
-        { name: "Odoo ERP System", level: "Intermediate", icon: "Boxes" },
-        { name: "UI/UX Prototyping (Figma)", level: "Intermediate", icon: "Figma" }
+        { name: "Odoo ERP System", level: "Advanced", icon: "Boxes" },
+        { name: "LAN Topologi & Network Mesh", level: "Advanced", icon: "Network" }
       ]
     }
   ],
@@ -101,30 +101,6 @@ export const portfolioData = {
       liveUrl: null
     },
     {
-      id: "iot-ac",
-      title: "IoT AC Monitoring & Energy Efficiency",
-      subtitle: "Sistem Monitoring Real-Time Penggunaan & Konsumsi Daya Listrik AC",
-      category: "Internet of Things & Smart Campus",
-      featured: true,
-      badge: "Dipublikasikan di SPECTA Journal of Technology",
-      summary: "Solusi IoT terintegrasi untuk mendeteksi pemborosan listrik di ruang kelas dengan memantau tegangan RMS, arus, daya aktif, dan status AC secara real-time ke web.",
-      metrics: [
-        { label: "Akurasi Standby", value: "1.7 - 1.9 W" },
-        { label: "Akurasi Aktif", value: "216.8 - 258.3 W" },
-        { label: "Potensi Penghematan", value: "Hingga 40-60% Beban Listrik" },
-        { label: "Status Publikasi", value: "SPECTA Journal Vol. 10 No. 1" }
-      ],
-      techStack: ["Arduino UNO", "ESP8266", "PZEM-004T", "DHT11", "MySQL", "Web Dashboard"],
-      highlights: [
-        "Sensor PZEM-004T membaca tegangan RMS, arus, dan daya aktif secara presisi langsung dari jalur AC.",
-        "Sensor DHT11 mengukur suhu dan kelembaban ruangan untuk korelasi efisiensi pendinginan.",
-        "Arduino UNO memproses sinyal telemetri dan ESP8266 mengirimkan data via Wi-Fi ke basis data MySQL.",
-        "Dashboard berbasis web menyajikan grafik konsumsi energi secara langsung kepada pengelola gedung kampus."
-      ],
-      github: null,
-      liveUrl: "https://journal.itk.ac.id/index.php/sjt"
-    },
-    {
       id: "bayan-run-it",
       title: "On-Site IT Infrastructure Bayan Run 2026",
       subtitle: "High-Availability Offline Server & Local Network Operations",
@@ -135,7 +111,8 @@ export const portfolioData = {
       metrics: [
         { label: "Downtime", value: "0% Selama Event" },
         { label: "Konektivitas", value: "Private LAN & Isolated Server" },
-        { label: "Data Handling", value: "Sinkronisasi Real-Time" }
+        { label: "Data Handling", value: "Sinkronisasi Real-Time" },
+        { label: "Operasional", value: "High Pressure Environment" }
       ],
       techStack: ["Router & Switch Config", "Local Web Server", "Local Database", "LAN Network Mesh"],
       highlights: [
@@ -153,7 +130,7 @@ export const portfolioData = {
       category: "Artificial Intelligence & Automation",
       featured: false,
       badge: "Open Source Project",
-      summary: "Eksplorasi pembuatan sistem agentik pintar untuk otomasi alur kerja dan penanganan instruksi adaptif.",
+      summary: "Eksplorasi pembuatan sistem cerdas untuk automasi alur kerja dan penanganan instruksi adaptif.",
       techStack: ["Python", "AI Agent Workflow", "GitHub API"],
       highlights: [
         "Mengintegrasikan automasi logika perintah cerdas berbasis modular.",
@@ -224,9 +201,9 @@ export const portfolioData = {
     period: "2022 - 2026",
     location: "Balikpapan, Kalimantan Timur",
     highlights: [
-      "Fokus kurikulum: Analisis & Perancangan Sistem Informasi, Arsitektur Enterprise, Rekayasa Perangkat Lunak, Manajemen Basis Data, dan IoT.",
-      "Tugas Akhir: Sistem Informasi Layanan Laboratorium (SIMLAB STMIK) dengan integrasi Laravel, Vue.js, dan metode Personal Extreme Programming.",
-      "Riset Terpublikasi: Ko-penulis publikasi jurnal ilmiah sistem monitoring AC berbasis IoT di SPECTA Journal of Technology."
+      "Fokus kurikulum: Analisis & Perancangan Sistem Informasi, Arsitektur Enterprise, Rekayasa Perangkat Lunak, Manajemen Basis Data, dan Tata Kelola IT.",
+      "Tugas Akhir Unggulan: Sistem Informasi Layanan Laboratorium (SIMLAB STMIK) dengan integrasi Laravel, Vue.js, dan metode Personal Extreme Programming.",
+      "Pengujian Komprehensif: Kelulusan 100% PHPUnit unit testing (97 test case) dan evaluasi UAT 91.2% (Sangat Baik)."
     ]
   },
 

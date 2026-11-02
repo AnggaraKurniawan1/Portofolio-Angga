@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
 import ProjectModal from './ProjectModal';
-import { ExternalLink, ArrowRight, Award, Zap, Cpu, Server, CheckCircle2 } from 'lucide-react';
+import { ExternalLink, ArrowRight, Award, Server, CheckCircle2, Bot } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
 export default function Projects() {
@@ -12,15 +12,15 @@ export default function Projects() {
   const filterTabs = [
     { id: 'all', name: 'Semua Proyek' },
     { id: 'web', name: 'Web Application' },
-    { id: 'iot', name: 'IoT & Smart Systems' },
-    { id: 'it', name: 'IT Support & Infra' }
+    { id: 'it', name: 'IT Support & Infra' },
+    { id: 'ai', name: 'AI & Automation' }
   ];
 
   const filteredProjects = projects.filter((p) => {
     if (filter === 'all') return true;
     if (filter === 'web') return p.category.includes('Web');
-    if (filter === 'iot') return p.category.includes('IoT');
     if (filter === 'it') return p.category.includes('IT') || p.category.includes('Infra');
+    if (filter === 'ai') return p.category.includes('Intelligence') || p.category.includes('Automation');
     return true;
   });
 
@@ -37,7 +37,7 @@ export default function Projects() {
             Proyek & Rekayasa Sistem
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-400">
-            Kumpulan proyek nyata yang mencakup transformasi digital web enterprise, integrasi telemetri IoT hemat energi, dan infrastruktur IT lapangan.
+            Kumpulan proyek nyata yang mencakup transformasi digital web enterprise, infrastruktur IT operasional lapangan, dan automasi cerdas.
           </p>
         </div>
 

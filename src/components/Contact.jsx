@@ -45,7 +45,7 @@ export default function Contact() {
             Hubungi Saya
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-400">
-            Terbuka untuk peluang kerja full-time, freelance project, kolaborasi penelitian IoT, atau sekadar berdiskusi seputar rekayasa sistem.
+            Terbuka untuk peluang kerja full-time, freelance project, implementasi sistem informasi, atau sekadar berdiskusi seputar rekayasa sistem.
           </p>
         </div>
 

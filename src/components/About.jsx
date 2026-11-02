@@ -1,6 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { GraduationCap, BookOpen, Cpu, Network, CheckCircle2, FileText, ArrowUpRight } from 'lucide-react';
+import { GraduationCap, BookOpen, Database, Network, CheckCircle2, FileText, ArrowUpRight } from 'lucide-react';
 
 export default function About() {
   const { education, personal } = portfolioData;
@@ -18,7 +18,7 @@ export default function About() {
             Tentang Anggara Kurniawan
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-400">
-            Menggabungkan keahlian analisa proses bisnis sistem informasi dengan implementasi perangkat lunak modern dan rekayasa perangkat keras IoT.
+            Menggabungkan keahlian analisa proses bisnis sistem informasi dengan implementasi perangkat lunak modern dan infrastruktur jaringan handal.
           </p>
         </div>
 
@@ -32,10 +32,10 @@ export default function About() {
                 <span>Profil Profesional</span>
               </h3>
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-                Saya adalah lulusan <strong>S1 Sistem Informasi dari Institut Teknologi Kalimantan (ITK)</strong> dengan predikat kelulusan sangat memuaskan (IPK 3.63). Memiliki ketertarikan mendalam dan keahlian teruji dalam <strong>Analisis Sistem, Pengembangan Aplikasi Web (Laravel & Vue/React), Sistem Berbasis IoT, serta IT Support & Jaringan</strong>.
+                Saya adalah lulusan <strong>S1 Sistem Informasi dari Institut Teknologi Kalimantan (ITK)</strong> dengan predikat kelulusan sangat memuaskan (IPK 3.63). Memiliki ketertarikan mendalam dan keahlian teruji dalam <strong>Analisis Sistem, Pengembangan Aplikasi Web (Laravel & Vue/React), Manajemen Basis Data, serta IT Support & Jaringan</strong>.
               </p>
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-                Selama perkuliahan dan pengalaman kerja di lapangan, saya terbiasa menghadapi tantangan nyata: mulai dari mendigitalisasi birokrasi manual laboratorium dengan 97 unit test tanpa cela, merancang sistem IoT pendeteksi pemborosan energi AC yang dipublikasikan di jurnal ilmiah, hingga membangun infrastruktur jaringan server lokal mandiri tanpa koneksi internet luar saat gelaran acara maraton besar.
+                Selama perkuliahan dan pengalaman kerja di lapangan, saya terbiasa menghadapi tantangan nyata: mulai dari mendigitalisasi birokrasi manual laboratorium dengan 97 unit test tanpa cela (SIMLAB STMIK), pemodelan basis data relasional terintegrasi, hingga membangun infrastruktur jaringan server lokal mandiri tanpa koneksi internet luar saat gelaran acara maraton besar.
               </p>
 
               {/* 4 Core Pillars */}
@@ -62,11 +62,11 @@ export default function About() {
 
                 <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
                   <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold text-sm mb-1">
-                    <Cpu className="w-4 h-4" />
-                    <span>IoT & Hardware Telemetri</span>
+                    <Database className="w-4 h-4" />
+                    <span>Database & Data Modeling</span>
                   </div>
                   <p className="text-xs text-slate-500 dark:text-slate-400">
-                    Integrasi sensor PZEM-004T, DHT11, Arduino UNO, ESP8266, & server database real-time.
+                    Perancangan ERD terstruktur, integrasi query MySQL efisien, dan data governance.
                   </p>
                 </div>
 

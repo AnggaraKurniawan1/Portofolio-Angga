@@ -47,12 +47,12 @@ export default function Hero() {
 
             {/* Sub-headline / Roles */}
             <p className="text-lg sm:text-xl font-medium text-slate-700 dark:text-slate-300">
-              Information System Specialist, Software Engineer & IoT Enthusiast
+              Information System Specialist & Full-Stack Software Engineer
             </p>
 
             {/* Bio summary */}
             <p className="text-slate-600 dark:text-slate-400 max-w-2xl text-base sm:text-lg leading-relaxed mx-auto lg:mx-0">
-              Lulusan S1 Sistem Informasi dari <strong className="text-slate-900 dark:text-white font-semibold">Institut Teknologi Kalimantan</strong> (IPK 3.63). Berpengalaman dalam perancangan aplikasi web enterprise (<span className="text-blue-600 dark:text-blue-400 font-medium">Laravel & Vue.js/React</span>), sistem monitoring cerdas <span className="text-indigo-600 dark:text-indigo-400 font-medium">IoT PZEM-004T</span>, dan infrastruktur <span className="text-purple-600 dark:text-purple-400 font-medium">IT Support on-site</span>.
+              Lulusan S1 Sistem Informasi dari <strong className="text-slate-900 dark:text-white font-semibold">Institut Teknologi Kalimantan</strong> (IPK 3.63). Berpengalaman dalam perancangan aplikasi web enterprise (<span className="text-blue-600 dark:text-blue-400 font-medium">Laravel & Vue.js/React</span>), analisis sistem & basis data, serta infrastruktur <span className="text-purple-600 dark:text-purple-400 font-medium">IT Support on-site</span>.
             </p>
 
             {/* Meta details (Location, GPA, Degree) */}
