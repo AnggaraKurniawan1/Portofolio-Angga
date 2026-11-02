@@ -17,6 +17,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
   const navLinks = [
     { name: 'Tentang', href: '#about' },
     { name: 'Keahlian', href: '#skills' },
+    { name: 'Lab Interaktif', href: '#studio' },
     { name: 'Proyek', href: '#projects' },
     { name: 'Pengalaman', href: '#experience' },
     { name: 'Prestasi', href: '#achievements' },

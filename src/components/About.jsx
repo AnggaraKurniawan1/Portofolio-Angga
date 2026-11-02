@@ -32,10 +32,10 @@ export default function About() {
                 <span>Profil Profesional</span>
               </h3>
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-                Saya adalah lulusan <strong>S1 Sistem Informasi dari Institut Teknologi Kalimantan (ITK)</strong> dengan predikat kelulusan sangat memuaskan (IPK 3.63). Memiliki ketertarikan mendalam dan keahlian teruji dalam <strong>Analisis Sistem, Pengembangan Aplikasi Web (Laravel & Vue/React), Manajemen Basis Data, serta IT Support & Jaringan</strong>.
+                Saya adalah lulusan <strong>S1 Sistem Informasi dari Institut Teknologi Kalimantan (ITK)</strong> dengan predikat kelulusan sangat memuaskan (IPK 3.63). Memiliki minat dan keahlian di bidang <strong>Analisis Sistem, Basis Data, IT Support Lapangan, dan Pengembangan Aplikasi</strong>.
               </p>
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-                Selama perkuliahan dan pengalaman kerja di lapangan, saya terbiasa menghadapi tantangan nyata: mulai dari mendigitalisasi birokrasi manual laboratorium dengan 97 unit test tanpa cela (SIMLAB STMIK), pemodelan basis data relasional terintegrasi, hingga membangun infrastruktur jaringan server lokal mandiri tanpa koneksi internet luar saat gelaran acara maraton besar.
+                Saya memiliki pemahaman kuat terhadap alur proses bisnis dan logika sistem. Mengetahui fondasi arsitektur memungkinkan saya untuk cepat belajar secara mandiri (otodidak), menelaah dokumentasi teknis, dan beradaptasi menyelesaikan implementasi nyata di lingkungan kerja teknologi informasi.
               </p>
 
               {/* 4 Core Pillars */}
@@ -43,40 +43,40 @@ export default function About() {
                 <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
                   <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold text-sm mb-1">
                     <BookOpen className="w-4 h-4" />
-                    <span>System & Business Analyst</span>
+                    <span>Analisis Sistem & Proses Bisnis</span>
                   </div>
                   <p className="text-xs text-slate-500 dark:text-slate-400">
-                    Menganalisa user requirement, 24 User Stories PXP, perancangan basis data relasional.
-                  </p>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
-                  <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold text-sm mb-1">
-                    <GraduationCap className="w-4 h-4" />
-                    <span>Full-Stack Web Engineering</span>
-                  </div>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">
-                    Framework modern (Laravel, React, Vue.js, Tailwind) dengan standar clean code & PHPUnit.
-                  </p>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
-                  <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold text-sm mb-1">
-                    <Database className="w-4 h-4" />
-                    <span>Database & Data Modeling</span>
-                  </div>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">
-                    Perancangan ERD terstruktur, integrasi query MySQL efisien, dan data governance.
+                    Memahami user requirement, pemodelan alur kerja, dan penyusunan user stories.
                   </p>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
                   <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 font-semibold text-sm mb-1">
                     <Network className="w-4 h-4" />
-                    <span>IT Support & Jaringan</span>
+                    <span>IT Support & Jaringan Lapangan</span>
                   </div>
                   <p className="text-xs text-slate-500 dark:text-slate-400">
-                    Konfigurasi router, switch, deployment server lokal, dan troubleshooting hardware lapangan.
+                    Pengalaman nyata setup router, switch, server lokal offline, dan troubleshooting PC.
+                  </p>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold text-sm mb-1">
+                    <Database className="w-4 h-4" />
+                    <span>Basis Data & Analisis Data</span>
+                  </div>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                    Pemodelan relasi ERD, query dasar MySQL, dan pemrosesan data untuk pengambilan keputusan.
+                  </p>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60">
+                  <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold text-sm mb-1">
+                    <GraduationCap className="w-4 h-4" />
+                    <span>Dasar Pemrograman Web</span>
+                  </div>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                    Paham alur logika web MVC (Laravel), styling Tailwind, & antusias eksplorasi otodidak.
                   </p>
                 </div>
               </div>
