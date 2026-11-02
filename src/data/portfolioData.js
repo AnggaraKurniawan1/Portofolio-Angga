@@ -17,8 +17,7 @@ export const portfolioData = {
     github: "https://github.com/AnggaraKurniawan1",
     gpa: "3.63 / 4.00",
     availableForHire: true,
-    cvPath: "./CV_Anggara_Kurniawan.pdf",
-    profileImage: "./images/profile.png"
+    cvPath: "./CV_Anggara_Kurniawan.pdf"
   },
 
   stats: [
