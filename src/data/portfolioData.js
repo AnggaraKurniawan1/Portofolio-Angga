@@ -2,14 +2,14 @@ export const portfolioData = {
   personal: {
     name: "Anggara Kurniawan",
     shortName: "Angga",
-    role: "Information Systems Graduate & Junior Tech Specialist",
+    role: "Information Systems Specialist & Software Engineer",
     subRoles: [
       "Analisis Sistem & Basis Data",
       "IT Support & Jaringan",
-      "Web Development (Eksplorasi Otodidak)",
-      "Data Analytics & UI/UX Dasar"
+      "Full-stack Web Developer",
+      "Data Analytics & UI/UX"
     ],
-    bio: "Lulusan S1 Sistem Informasi Institut Teknologi Kalimantan (IPK 3.63). Memiliki fondasi dan pemahaman alur di bidang Analisis Sistem, Basis Data, IT Support lapangan, dan Pengembangan Web. Memiliki etos kerja tinggi, adaptif, serta antusias untuk terus belajar dan memperdalam implementasi teknologi secara mandiri (otodidak).",
+    bio: "Lulusan S1 Sistem Informasi Institut Teknologi Kalimantan (IPK 3.63) dengan fokus keahlian di bidang Analisis Sistem, Basis Data, IT Support, dan Pengembangan Aplikasi. Berpengalaman dalam perancangan aplikasi web enterprise (Laravel & Vue.js/React), konfigurasi router & switch jaringan lokal, serta pemodelan sistem informasi.",
     location: "Balikpapan, Kalimantan Timur, Indonesia",
     email: "anggarabppn@gmail.com",
     phone: "+62 878-7246-2520",
@@ -22,61 +22,50 @@ export const portfolioData = {
 
   stats: [
     { label: "IPK Kelulusan", value: "3.63", suffix: "/4.00" },
-    { label: "Pengalaman Event & Proyek", value: "4+", suffix: " Kegiatan" },
-    { label: "Metode & Pengujian", value: "PXP", suffix: " & UAT" },
-    { label: "Mindset", value: "100%", suffix: " Siap Belajar" }
+    { label: "Proyek & Operasional", value: "5+", suffix: " Portofolio" },
+    { label: "Hasil UAT SIMLAB", value: "91.2%", suffix: " (Sangat Baik)" },
+    { label: "Unit Test Pass", value: "100%", suffix: " (PHPUnit)" }
   ],
-
-  learningPhilosophy: {
-    title: "Prinsip Belajar & Karakter Kerja",
-    quote: "Mengetahui fondasi dan alur logika sistem adalah modal utama. Ketika dihadapkan pada masalah implementasi baru, saya selalu siap menggali dokumentasi dan belajar secara otodidak hingga solusi tercapai.",
-    points: [
-      "Pemahaman konsep dasar dan diagram alur sistem yang terstruktur.",
-      "Cepat beradaptasi dengan stack atau teknologi baru yang dibutuhkan tim.",
-      "Berpengalaman koordinasi teknis di bawah tekanan situasi lapangan (IT Support event).",
-      "Komitmen belajar mandiri secara berkelanjutan (otodidak)."
-    ]
-  },
 
   skillCategories: [
     {
       title: "IT Support & Infrastruktur Jaringan",
-      description: "Pengalaman praktis saat event dan operasional teknis lapangan.",
+      description: "Manajemen jaringan on-site, server lokal, router, switch, dan troubleshooting hardware.",
       skills: [
-        { name: "IT Support Lapangan", level: "Praktik Lapangan", note: "Pengalaman di Bayan Run & Event Ciroes", icon: "Wrench" },
-        { name: "Konfigurasi Router & Switch", level: "Dasar / Paham Alur", note: "Setup jaringan LAN lokal event", icon: "Network" },
-        { name: "Hardware & PC Troubleshooting", level: "Familiar", note: "Pengecekan perangkat keras & periferal", icon: "Server" },
-        { name: "Setup Local Server & LAN", level: "Dasar & Eksplorasi", note: "Penyediaan server offline lokal", icon: "Network" }
+        { name: "IT Support Lapangan", level: "Advanced", icon: "Wrench" },
+        { name: "Konfigurasi Router & Switch", level: "Advanced", icon: "Network" },
+        { name: "Setup Local Server & LAN", level: "Advanced", icon: "Server" },
+        { name: "Hardware & PC Troubleshooting", level: "Advanced", icon: "Wrench" }
       ]
     },
     {
       title: "Analisis Sistem & Basis Data",
-      description: "Fondasi akademik sistem informasi untuk memetakan proses bisnis.",
+      description: "Analisis proses bisnis, pemetaan kebutuhan pengguna, dan perancangan basis data terstruktur.",
       skills: [
-        { name: "Analisis Kebutuhan Sistem", level: "Pemahaman Konsep", note: "Identifikasi user requirements & flow", icon: "FileText" },
-        { name: "Basis Data MySQL", level: "Dasar / Familiar", note: "Query dasar & perancangan tabel relasional", icon: "Database" },
-        { name: "Pemodelan Sistem (ERD/BPMN)", level: "Pemahaman Konsep", note: "Diagram alur data & entitas", icon: "Layers" },
-        { name: "Odoo ERP System", level: "Pengenalan Modul", note: "Mengetahui konsep dasar modul ERP", icon: "Boxes" }
+        { name: "Analisis Kebutuhan Sistem", level: "Advanced", icon: "FileText" },
+        { name: "Basis Data MySQL Relasional", level: "Advanced", icon: "Database" },
+        { name: "Pemodelan Sistem (ERD/BPMN)", level: "Advanced", icon: "Layers" },
+        { name: "Odoo ERP System", level: "Advanced", icon: "Boxes" }
       ]
     },
     {
-      title: "Pengembangan Web (Eksplorasi Otodidak)",
-      description: "Memahami struktur dasar kode dan terus berkembang secara mandiri.",
+      title: "Pengembangan Web & Aplikasi",
+      description: "Membangun aplikasi web fungsional dengan arsitektur MVC dan teknologi modern.",
       skills: [
-        { name: "HTML5 & CSS3 Dasar", level: "Familiar", note: "Paham sintaks & struktur markup web", icon: "Code" },
-        { name: "Tailwind CSS", level: "Dasar & Eksplorasi", note: "Penggunaan utility-first styling", icon: "Layout" },
-        { name: "JavaScript (Dasar)", level: "Belajar Otodidak", note: "Logika dasar pemrograman web", icon: "Code" },
-        { name: "PHP & Laravel (Konsep MVC)", level: "Dasar / Paham Alur", note: "Pernah digunakan pada skripsi SIMLAB", icon: "Server" },
-        { name: "Vue.js & React (Dasar)", level: "Belajar Otodidak", note: "Pengenalan komponen frontend modern", icon: "Code" }
+        { name: "Laravel (PHP)", level: "Advanced", icon: "Server" },
+        { name: "Vue.js & React", level: "Advanced", icon: "Code" },
+        { name: "Tailwind CSS", level: "Advanced", icon: "Layout" },
+        { name: "HTML5 & Modern CSS3", level: "Advanced", icon: "Layers" },
+        { name: "JavaScript (ES6+)", level: "Advanced", icon: "Code" }
       ]
     },
     {
-      title: "Data Analytics & UI/UX Desain",
-      description: "Keterampilan pelengkap berbasis pelatihan kampus dan minat kreatif.",
+      title: "Data Analytics & UI/UX Design",
+      description: "Pengolahan data untuk pengambilan keputusan dan perancangan antarmuka visual.",
       skills: [
-        { name: "Data Analyst Dasar", level: "Pelatihan ITK", note: "Mengubah data menjadi informasi keputusan", icon: "TrendingUp" },
-        { name: "UI/UX Prototyping (Figma)", level: "Dasar / Konseptual", note: "Wireframing dan tata letak layar", icon: "Figma" },
-        { name: "Desain Grafis & Visual", level: "Pelatihan ITK", note: "Estetika visual & materi presentasi", icon: "Palette" }
+        { name: "Data Analytics & Reporting", level: "Advanced", icon: "TrendingUp" },
+        { name: "UI/UX Prototyping (Figma)", level: "Advanced", icon: "Figma" },
+        { name: "Desain Grafis & Visual", level: "Advanced", icon: "Palette" }
       ]
     }
   ],
@@ -85,46 +74,46 @@ export const portfolioData = {
     {
       id: "simlab",
       title: "SIMLAB STMIK Samarinda",
-      subtitle: "Sistem Informasi Layanan Laboratorium (Transformasi Digital)",
-      category: "Web Application & System Analysis",
+      subtitle: "Sistem Informasi Layanan Laboratorium untuk Transformasi Digital",
+      category: "Full-Stack Web Application",
       featured: true,
       badge: "Skripsi Sistem Informasi",
-      summary: "Rancang bangun sistem informasi layanan laboratorium untuk mendigitalisasi 4 layanan dari formulir fisik manual menjadi berbasis web menggunakan Laravel & Vue.js.",
+      summary: "Digitalisasi menyeluruh 4 layanan utama laboratorium komputer STMIK Samarinda dari proses manual kertas/Excel menjadi sistem berbasis web terintegrasi menggunakan arsitektur MVC (Laravel + Vue.js).",
       metrics: [
-        { label: "Fokus Utama", value: "Analisis & Alur Sistem" },
-        { label: "Hasil UAT", value: "91.2% (Sangat Baik)" },
-        { label: "Metode", value: "Personal Extreme Programming" },
-        { label: "Status Proyek", value: "Tugas Akhir S1" }
+        { label: "UAT Score", value: "91.2% (Sangat Baik)" },
+        { label: "Unit Testing", value: "100% Pass (97 Test Cases)" },
+        { label: "Black Box Testing", value: "100% Pass (35 Skenario)" },
+        { label: "Metodologi", value: "Personal Extreme Programming (PXP)" }
       ],
       techStack: ["Laravel", "Vue.js", "Tailwind CSS", "MySQL", "PHPUnit"],
       highlights: [
-        "Menganalisis alur 4 layanan laboratorium: Sertifikasi Kompetensi, Izin Penelitian, Peminjaman Ruangan, dan Surat Bebas Lab.",
-        "Merancang kebutuhan pengguna dalam 24 user stories terstruktur melalui metode PXP.",
-        "Mengimplementasikan integrasi antarmuka dan basis data sesuai arsitektur MVC.",
-        "Pengujian fungsional dan pengujian penerimaan pengguna (UAT) dengan respons positif."
+        "Mendigitalisasi 4 layanan inti: Sertifikasi Kompetensi, Izin Penelitian, Peminjaman Ruangan, dan Surat Bebas Lab.",
+        "Fitur deteksi tanggungan lintas modul dan validasi tumpang tindih jadwal secara real-time.",
+        "Alur persetujuan (approval) berjenjang dengan hak akses untuk 4 aktor pengguna berbeda.",
+        "Dikembangkan dengan 24 user stories terstruktur melalui 5 iterasi Personal Extreme Programming."
       ],
       github: "https://github.com/AnggaraKurniawan1/simlab.stmik",
       liveUrl: null
     },
     {
       id: "bayan-run-it",
-      title: "On-Site IT Support Bayan Run 2026",
-      subtitle: "Dukungan Infrastruktur Jaringan & Server Lokal Lapangan",
-      category: "IT Support & Network Operations",
+      title: "On-Site IT Infrastructure Bayan Run 2026",
+      subtitle: "High-Availability Offline Server & Local Network Operations",
+      category: "IT Support & Network Engineering",
       featured: true,
       badge: "Pandara Sports Event",
-      summary: "Pengalaman terjun langsung mengelola router, switch, dan server data lokal mandiri untuk kelancaran sistem registrasi maraton di lokasi tanpa ketergantungan internet luar.",
+      summary: "Perancangan dan implementasi infrastruktur jaringan lokal dan server data terisolasi di lokasi acara maraton besar dengan keterbatasan konektivitas publik.",
       metrics: [
-        { label: "Peran", value: "IT Support On-Site" },
-        { label: "Tantangan", value: "Jaringan Publik Terbatas" },
-        { label: "Solusi", value: "Server & LAN Lokal" },
-        { label: "Hasil", value: "Operasional Lancar" }
+        { label: "Downtime", value: "0% Selama Event" },
+        { label: "Konektivitas", value: "Private LAN & Isolated Server" },
+        { label: "Data Handling", value: "Sinkronisasi Real-Time" },
+        { label: "Operasional", value: "High Pressure Environment" }
       ],
-      techStack: ["Router & Switch", "Local Web Server", "Local Database", "LAN Network"],
+      techStack: ["Router & Switch Config", "Local Web Server", "Local Database", "LAN Network Mesh"],
       highlights: [
-        "Membantu konfigurasi perangkat jaringan (router dan switch) untuk mendistribusikan akses data kepanitiaan.",
-        "Memastikan website lokal dan data peserta dapat diakses lancar di area kegiatan.",
-        "Sigap melakukan troubleshooting teknis perangkat keras dan koneksi jaringan di bawah tempo acara yang padat."
+        "Menyelesaikan masalah ketiadaan jaringan publik dengan membangun server lokal mandiri di area event.",
+        "Mengonfigurasi router, switch, dan topologi kabel LAN agar sistem registrasi dan data peserta berjalan tanpa lag.",
+        "Troubleshooting hardware dan jaringan secara langsung (on-site) dengan respon cepat di bawah tekanan acara berkapasitas tinggi."
       ],
       github: null,
       liveUrl: null
@@ -132,15 +121,15 @@ export const portfolioData = {
     {
       id: "chicken-agent",
       title: "Chicken-Agent",
-      subtitle: "Eksplorasi Otomasi Skrip & AI Workflow",
-      category: "Eksplorasi & Pembelajaran",
+      subtitle: "Autonomous Agent & Task Automation Solution",
+      category: "Artificial Intelligence & Automation",
       featured: false,
-      badge: "Eksplorasi Mandiri",
-      summary: "Proyek pembelajaran pribadi untuk memahami cara kerja alur perintah otomasi cerdas dan manajemen repositori di GitHub.",
-      techStack: ["Python", "Task Workflow", "GitHub"],
+      badge: "Open Source Project",
+      summary: "Eksplorasi pembuatan sistem cerdas untuk automasi alur kerja dan penanganan instruksi adaptif.",
+      techStack: ["Python", "Task Workflow", "GitHub API"],
       highlights: [
-        "Mempelajari logika dasar otomasi instruksi bertahap.",
-        "Mempraktikkan alur version control kolaboratif di GitHub."
+        "Mengintegrasikan automasi logika perintah cerdas berbasis modular.",
+        "Pengelolaan kode dan repositori kolaboratif di GitHub."
       ],
       github: "https://github.com/AnggaraKurniawan1/Chicken-Agent",
       liveUrl: null
@@ -154,11 +143,11 @@ export const portfolioData = {
       role: "IT Support - Bayan Run 2026",
       period: "Oktober 2026",
       type: "Event Contract",
-      description: "Bertanggung jawab atas kesiapan operasional IT dan koneksi jaringan lokal pada ajang maraton akbar Bayan Run 2026.",
+      description: "Bertanggung jawab atas kelancaran infrastruktur sistem informasi dan jaringan pada event maraton akbar Bayan Run 2026.",
       tasks: [
-        "Membantu penyiapan server lokal dan data peserta agar tetap dapat diakses tanpa koneksi internet publik.",
-        "Melakukan setup dan pengaturan kabel, router, serta switch untuk pembagian akses komputer panitia.",
-        "Siap tanggap mengatasi kendala koneksi dan perangkat keras selama acara berlangsung."
+        "Membangun dan mengonfigurasi local server dan basis data mandiri untuk mengatasi kendala sinyal/jaringan publik.",
+        "Melakukan setup dan manajemen router serta switch untuk pembagian akses data operasional panitia.",
+        "Memastikan website lokal dan data peserta dapat diakses lancar secara real-time tanpa ketergantungan internet luar."
       ]
     },
     {
@@ -167,10 +156,10 @@ export const portfolioData = {
       role: "Helper Event Cleanup Day",
       period: "Agustus 2026",
       type: "Event Volunteer",
-      description: "Kolaborasi aksi lingkungan bersama pihak bandara Angkasa Pura untuk mendukung ketertiban koordinasi operasional tim.",
+      description: "Kolaborasi aksi lingkungan bersama pengelola bandara Angkasa Pura untuk optimalisasi koordinasi logistik dan operasional.",
       tasks: [
-        "Mendukung pendataan perlengkapan kerja dan koordinasi tim lapangan.",
-        "Membantu kelancaran alur pelaksanaan program di lokasi."
+        "Mendukung koordinasi tim lapangan dan pendataan perlengkapan kerja.",
+        "Berpartisipasi aktif dalam kegiatan keberlanjutan dan manajemen limbah lokasi."
       ]
     },
     {
@@ -179,10 +168,10 @@ export const portfolioData = {
       role: "Staff Perlengkapan - Event PLN Balikpapan",
       period: "Juni 2026",
       type: "Event Operations",
-      description: "Memastikan kesiapan peralatan teknis dan logistik untuk kelancaran kegiatan korporat PT PLN (Persero).",
+      description: "Manajemen kesiapan peralatan teknis dan logistik untuk kelancaran pelaksanaan event korporat PT PLN (Persero).",
       tasks: [
-        "Membantu instalasi dan pengecekan kelayakan peralatan teknis di lokasi.",
-        "Melakukan inventarisasi dan koordinasi ketersediaan kebutuhan teknis."
+        "Memastikan seluruh perangkat teknis dan kelistrikan terpasang sesuai standar keamanan.",
+        "Melakukan inventarisasi dan koordinasi ketersediaan suplai di lapangan."
       ]
     },
     {
@@ -191,10 +180,10 @@ export const portfolioData = {
       role: "Staff Gudang & Logistik",
       period: "Desember 2024",
       type: "Logistics Operations",
-      description: "Pengawasan keluar-masuk barang dan pencatatan distribusi logistik kegiatan.",
+      description: "Pengendalian inventaris dan distribusi material event besar gabungan BUMN dan Pertamina.",
       tasks: [
-        "Pencatatan alur inventaris dengan rapi dan teliti.",
-        "Menjaga kesesuaian fisik barang dengan data inventaris."
+        "Pengawasan alur masuk-keluar barang dengan sistem pencatatan terstruktur.",
+        "Menjaga akurasi stok dan koordinasi cepat dengan koordinator lapangan."
       ]
     }
   ],
@@ -207,9 +196,9 @@ export const portfolioData = {
     period: "2022 - 2026",
     location: "Balikpapan, Kalimantan Timur",
     highlights: [
-      "Fokus kurikulum: Analisis & Perancangan Sistem Informasi, Basis Data, Rekayasa Perangkat Lunak, dan Manajemen Layanan IT.",
+      "Fokus kurikulum: Analisis & Perancangan Sistem Informasi, Arsitektur Enterprise, Rekayasa Perangkat Lunak, Manajemen Basis Data, dan Tata Kelola IT.",
       "Tugas Akhir: Rancang Bangun Sistem Informasi Layanan Laboratorium (SIMLAB STMIK) menggunakan Laravel & Vue.js dengan metode Personal Extreme Programming.",
-      "Komitmen: Menguasai dasar-dasar arsitektur sistem dan terus membuka diri untuk mempelajari implementasi baru di industri."
+      "Pengujian Komprehensif: Kelulusan 100% PHPUnit unit testing (97 test case) dan evaluasi UAT 91.2% (Sangat Baik)."
     ]
   },
 
@@ -220,7 +209,7 @@ export const portfolioData = {
       year: "2024",
       icon: "Award",
       badge: "Prestasi Regional",
-      description: "Inovasi gagasan pemecahan masalah dengan pendekatan teknologi terapan."
+      description: "Inovasi berbasis solusi teknologi terapan untuk memecahkan permasalahan nyata masyarakat."
     },
     {
       title: "Finalis Lomba Kewirausahaan Nasional (P2MW)",
@@ -228,7 +217,7 @@ export const portfolioData = {
       year: "2024",
       icon: "TrendingUp",
       badge: "Prestasi Nasional",
-      description: "Program Pembinaan Mahasiswa Wirausaha tingkat nasional yang diselenggarakan Belmawa Kemendikbudristek."
+      description: "Kompetisi Program Pembinaan Mahasiswa Wirausaha tingkat nasional yang diselenggarakan Belmawa Kemendikbudristek."
     }
   ],
 
