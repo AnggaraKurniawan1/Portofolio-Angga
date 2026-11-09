@@ -1,40 +1,42 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Award, CheckCircle, Code, Shield } from 'lucide-react';
 
 export default function Stats() {
-  const icons = [Award, Code, CheckCircle, Shield];
+  const { stats } = portfolioData;
 
   return (
-    <section className="py-8 relative">
+    <section className="py-10 md:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-          {portfolioData.stats.map((stat, idx) => {
-            const Icon = icons[idx % icons.length];
-            return (
-              <div
-                key={stat.label}
-                className="glass-card p-5 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 hover:border-blue-500/50 transition-all duration-300 group"
+        <div
+          className="grid grid-cols-2 lg:grid-cols-4 gap-3 p-5 rounded-od-lg"
+          style={{
+            backgroundColor: 'var(--color-surface)',
+            border: '1px solid var(--color-border)',
+            boxShadow: 'var(--shadow-sm)',
+          }}
+        >
+          {stats.map((stat, i) => (
+            <div
+              key={i}
+              className={`flex flex-col items-center text-center px-4 py-4 ${
+                i < stats.length - 1 ? 'border-r' : ''
+              }`}
+              style={{ borderColor: 'var(--color-border)' }}
+            >
+              <span
+                className="text-2xl sm:text-3xl font-extrabold tracking-tight"
+                style={{ color: 'var(--color-brand)' }}
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200/50 dark:border-blue-800/50 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                      {stat.value}
-                      <span className="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 ml-1">
-                        {stat.suffix}
-                      </span>
-                    </div>
-                    <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">
-                      {stat.label}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+                {stat.value}
+                <span className="text-xs font-semibold ml-0.5" style={{ color: 'var(--color-text-muted)' }}>
+                  {stat.suffix}
+                </span>
+              </span>
+              <span className="text-[11px] sm:text-xs font-medium mt-1" style={{ color: 'var(--color-text-muted)' }}>
+                {stat.label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

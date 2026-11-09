@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { Mail, Phone, MapPin, Send, CheckCircle2, Copy, Check } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Check, Copy } from 'lucide-react';
 import { GithubIcon, WhatsAppIcon } from './Icons';
 
 export default function Contact() {
   const { personal } = portfolioData;
   const [copied, setCopied] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(personal.email);
@@ -22,231 +16,211 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Create mailto link
     const mailtoUrl = `mailto:${personal.email}?subject=${encodeURIComponent(
       formData.subject || 'Peluang Kerjasama / Diskusi Portofolio'
     )}&body=${encodeURIComponent(
       `Halo Anggara,\n\nNama: ${formData.name}\nEmail: ${formData.email}\n\nPesan:\n${formData.message}`
     )}`;
     window.location.href = mailtoUrl;
-    setSubmitted(true);
+  };
+
+  const inputStyle = {
+    width: '100%',
+    padding: '10px 14px',
+    borderRadius: 'var(--radius-base)',
+    backgroundColor: 'var(--color-surface-raised)',
+    border: '1px solid var(--color-border)',
+    color: 'var(--color-text-primary)',
+    fontSize: '13px',
+    outline: 'none',
+    transition: 'border-color 150ms',
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 relative bg-slate-100/50 dark:bg-slate-900/30">
+    <section
+      id="contact"
+      className="py-20 md:py-28"
+      style={{ backgroundColor: 'var(--color-bg-alt)' }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-semibold uppercase tracking-wider mb-3">
-            Mari Terhubung
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+
+        {/* Header */}
+        <div className="max-w-2xl mx-auto text-center mb-14">
+          <div className="od-section-label mb-4">Mari Terhubung</div>
+          <h2
+            className="text-3xl sm:text-4xl font-extrabold tracking-tight"
+            style={{ color: 'var(--color-text-primary)' }}
+          >
             Hubungi Saya
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-400">
-            Terbuka untuk peluang kerja full-time, freelance project, implementasi sistem informasi, atau sekadar berdiskusi seputar rekayasa sistem.
+          <p className="mt-3 text-base" style={{ color: 'var(--color-text-secondary)' }}>
+            Terbuka untuk peluang kerja full-time, freelance, implementasi sistem informasi, atau sekadar berdiskusi.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-5xl mx-auto">
-          
-          {/* Left Column: Direct Contacts */}
-          <div className="lg:col-span-5 space-y-4">
-            
-            {/* WhatsApp Card */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+
+          {/* Left: Contact Methods */}
+          <div className="lg:col-span-2 space-y-3">
+            {/* WhatsApp */}
             <a
               href={personal.phoneUrl}
               target="_blank"
               rel="noreferrer"
-              className="glass-card p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 flex items-center gap-4 transition-all group"
+              className="od-surface flex items-center gap-4 p-4"
+              style={{ textDecoration: 'none' }}
             >
-              <div className="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0 group-hover:scale-110 transition-transform">
-                <WhatsAppIcon className="w-6 h-6" />
+              <div
+                className="w-11 h-11 rounded-od-md flex items-center justify-center shrink-0"
+                style={{ backgroundColor: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.18)' }}
+              >
+                <WhatsAppIcon className="w-5 h-5" style={{ color: '#10B981' }} />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                  WhatsApp / Telepon
-                </div>
-                <div className="text-base font-bold text-slate-900 dark:text-white truncate">
-                  {personal.phone}
-                </div>
-                <div className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-0.5">
-                  Klik untuk chat langsung →
-                </div>
+                <div className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>WhatsApp / Telepon</div>
+                <div className="text-sm font-bold" style={{ color: 'var(--color-text-primary)' }}>{personal.phone}</div>
+                <div className="text-[11px] font-semibold mt-0.5" style={{ color: '#10B981' }}>Chat langsung →</div>
               </div>
             </a>
 
-            {/* Email Card with Copy button */}
-            <div className="glass-card p-5 rounded-2xl border border-slate-200 dark:border-slate-800 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0">
-                <Mail className="w-6 h-6" />
+            {/* Email */}
+            <div className="od-surface flex items-center gap-4 p-4">
+              <div
+                className="w-11 h-11 rounded-od-md flex items-center justify-center shrink-0"
+                style={{ backgroundColor: 'rgba(94,106,210,0.08)', border: '1px solid rgba(94,106,210,0.15)' }}
+              >
+                <Mail className="w-5 h-5" style={{ color: 'var(--color-brand)' }} />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                  Email Resmi
-                </div>
-                <div className="text-base font-bold text-slate-900 dark:text-white truncate">
-                  {personal.email}
-                </div>
+                <div className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>Email Resmi</div>
+                <div className="text-sm font-bold truncate" style={{ color: 'var(--color-text-primary)' }}>{personal.email}</div>
                 <button
                   onClick={handleCopyEmail}
-                  className="inline-flex items-center gap-1 text-xs text-blue-600 dark:text-blue-400 font-semibold hover:underline mt-0.5"
+                  className="inline-flex items-center gap-1 text-[11px] font-semibold mt-0.5"
+                  style={{ color: 'var(--color-brand)' }}
                 >
-                  {copied ? (
-                    <>
-                      <Check className="w-3.5 h-3.5 text-emerald-500" />
-                      <span className="text-emerald-500">Tersalin ke clipboard!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-3.5 h-3.5" />
-                      <span>Salin alamat email</span>
-                    </>
-                  )}
+                  {copied
+                    ? <><Check className="w-3 h-3" style={{ color: '#10B981' }} /><span style={{ color: '#10B981' }}>Tersalin!</span></>
+                    : <><Copy className="w-3 h-3" />Salin email</>
+                  }
                 </button>
               </div>
             </div>
 
-            {/* GitHub Profile */}
+            {/* Location */}
+            <div className="od-surface flex items-center gap-4 p-4">
+              <div
+                className="w-11 h-11 rounded-od-md flex items-center justify-center shrink-0"
+                style={{ backgroundColor: 'rgba(167,139,250,0.08)', border: '1px solid rgba(167,139,250,0.15)' }}
+              >
+                <MapPin className="w-5 h-5" style={{ color: '#A78BFA' }} />
+              </div>
+              <div>
+                <div className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>Lokasi</div>
+                <div className="text-sm font-semibold" style={{ color: 'var(--color-text-primary)' }}>{personal.location}</div>
+              </div>
+            </div>
+
+            {/* GitHub */}
             <a
               href={personal.github}
               target="_blank"
               rel="noreferrer"
-              className="glass-card p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-slate-400 flex items-center gap-4 transition-all group"
+              className="od-surface flex items-center gap-4 p-4"
+              style={{ textDecoration: 'none' }}
             >
-              <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-800 dark:text-slate-200 shrink-0 group-hover:scale-110 transition-transform">
-                <GithubIcon className="w-6 h-6" />
+              <div
+                className="w-11 h-11 rounded-od-md flex items-center justify-center shrink-0"
+                style={{ backgroundColor: 'var(--color-surface-raised)', border: '1px solid var(--color-border)' }}
+              >
+                <GithubIcon className="w-5 h-5" style={{ color: 'var(--color-text-primary)' }} />
               </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                  GitHub Profile
-                </div>
-                <div className="text-base font-bold text-slate-900 dark:text-white truncate">
-                  github.com/AnggaraKurniawan1
-                </div>
-                <div className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">
-                  Buka repositori & aktivitas →
-                </div>
+              <div>
+                <div className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>GitHub</div>
+                <div className="text-sm font-semibold" style={{ color: 'var(--color-text-primary)' }}>AnggaraKurniawan1</div>
               </div>
             </a>
-
-            {/* Location */}
-            <div className="glass-card p-5 rounded-2xl border border-slate-200 dark:border-slate-800 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 flex items-center justify-center text-amber-600 dark:text-amber-400 shrink-0">
-                <MapPin className="w-6 h-6" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-xs font-medium text-slate-500 dark:text-slate-400">
-                  Domisili
-                </div>
-                <div className="text-base font-bold text-slate-900 dark:text-white">
-                  {personal.location}
-                </div>
-                <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                  Siap relokasi / kerja remote
-                </div>
-              </div>
-            </div>
-
           </div>
 
-          {/* Right Column: Direct Message Form */}
-          <div className="lg:col-span-7">
-            <div className="glass-card p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                Kirim Pesan Cepat
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-6">
-                Formulir ini akan langsung menghubungkan Anda ke email saya.
-              </p>
-
-              {submitted && (
-                <div className="mb-6 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="text-sm font-bold text-emerald-700 dark:text-emerald-300">
-                      Aplikasi Email Terbuka!
-                    </h4>
-                    <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-0.5">
-                      Pesan Anda telah disiapkan di aplikasi email default. Anda juga dapat mengirim pesan langsung via WhatsApp.
-                    </p>
-                  </div>
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                      Nama Anda
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Contoh: Budi Santoso"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                      Email Anda
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="nama@perusahaan.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                </div>
-
+          {/* Right: Form */}
+          <div className="lg:col-span-3 od-surface p-6 sm:p-7">
+            <h3 className="text-base font-bold mb-5" style={{ color: 'var(--color-text-primary)' }}>
+              Kirim Pesan Langsung
+            </h3>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                    Subjek
+                  <label className="block text-xs font-semibold mb-1.5" style={{ color: 'var(--color-text-secondary)' }}>
+                    Nama Lengkap
                   </label>
                   <input
                     type="text"
                     required
-                    placeholder="Contoh: Tawaran Posisi IT Support / Proyek Web"
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Nama Anda"
+                    value={formData.name}
+                    onChange={e => setFormData({ ...formData, name: e.target.value })}
+                    style={inputStyle}
+                    onFocus={e => e.target.style.borderColor = 'var(--color-brand)'}
+                    onBlur={e => e.target.style.borderColor = 'var(--color-border)'}
                   />
                 </div>
-
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                    Pesan
+                  <label className="block text-xs font-semibold mb-1.5" style={{ color: 'var(--color-text-secondary)' }}>
+                    Email
                   </label>
-                  <textarea
-                    rows={4}
+                  <input
+                    type="email"
                     required
-                    placeholder="Tuliskan pesan atau detail peluang yang ingin didiskusikan..."
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  ></textarea>
+                    placeholder="email@domain.com"
+                    value={formData.email}
+                    onChange={e => setFormData({ ...formData, email: e.target.value })}
+                    style={inputStyle}
+                    onFocus={e => e.target.style.borderColor = 'var(--color-brand)'}
+                    onBlur={e => e.target.style.borderColor = 'var(--color-border)'}
+                  />
                 </div>
+              </div>
 
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md shadow-blue-500/20 transition-all duration-200 active:scale-95"
-                >
-                  <Send className="w-4 h-4" />
-                  <span>Kirim Pesan ke Email</span>
-                </button>
-              </form>
+              <div>
+                <label className="block text-xs font-semibold mb-1.5" style={{ color: 'var(--color-text-secondary)' }}>
+                  Subjek
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Contoh: Tawaran IT Support / Kolaborasi Proyek"
+                  value={formData.subject}
+                  onChange={e => setFormData({ ...formData, subject: e.target.value })}
+                  style={inputStyle}
+                  onFocus={e => e.target.style.borderColor = 'var(--color-brand)'}
+                  onBlur={e => e.target.style.borderColor = 'var(--color-border)'}
+                />
+              </div>
 
-            </div>
+              <div>
+                <label className="block text-xs font-semibold mb-1.5" style={{ color: 'var(--color-text-secondary)' }}>
+                  Pesan
+                </label>
+                <textarea
+                  rows={5}
+                  required
+                  placeholder="Tuliskan detail peluang atau pesan Anda..."
+                  value={formData.message}
+                  onChange={e => setFormData({ ...formData, message: e.target.value })}
+                  style={{ ...inputStyle, resize: 'vertical' }}
+                  onFocus={e => e.target.style.borderColor = 'var(--color-brand)'}
+                  onBlur={e => e.target.style.borderColor = 'var(--color-border)'}
+                />
+              </div>
+
+              <button type="submit" className="od-btn-primary w-full justify-center">
+                <Send className="w-4 h-4" />
+                Kirim via Email
+              </button>
+            </form>
           </div>
 
         </div>
-
       </div>
     </section>
   );
