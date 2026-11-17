@@ -71,7 +71,11 @@ export default function About() {
                 <strong style={{ color: 'var(--color-text-primary)' }}>
                   S1 Sistem Informasi dari Institut Teknologi Kalimantan (ITK)
                 </strong>{' '}
-                dengan predikat kelulusan sangat memuaskan (IPK 3.63). Memiliki fokus keahlian di bidang Analisis Sistem, Basis Data, IT Support Lapangan, dan Pengembangan Aplikasi.
+                dengan predikat kelulusan sangat memuaskan (IPK 3.63), dan saat ini aktif berkontribusi sebagai{' '}
+                <strong style={{ color: 'var(--color-brand)' }}>
+                  IT Support Intern di PT Petrolab Services
+                </strong>{' '}
+                (mulai 16 November 2026). Memiliki fokus keahlian di bidang IT Support Lapangan, Infrastruktur Jaringan, Analisis Proses Bisnis, dan Basis Data.
               </p>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>
                 Pemahaman kuat terhadap alur proses bisnis dan logika sistem memungkinkan saya untuk cepat belajar secara mandiri, menelaah dokumentasi teknis, dan beradaptasi menyelesaikan implementasi nyata di lingkungan IT profesional.

@@ -56,13 +56,23 @@ export default function Experience() {
                   {/* Top badges */}
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                     <span
-                      className="od-pill"
-                      style={{
-                        backgroundColor: 'rgba(94,106,210,0.08)',
-                        border: '1px solid rgba(94,106,210,0.15)',
-                        color: 'var(--color-brand)',
-                      }}
+                      className={`od-pill ${exp.type.includes('Aktif') ? 'od-pill-success' : ''}`}
+                      style={
+                        !exp.type.includes('Aktif')
+                          ? {
+                              backgroundColor: 'rgba(94,106,210,0.08)',
+                              border: '1px solid rgba(94,106,210,0.15)',
+                              color: 'var(--color-brand)',
+                            }
+                          : {}
+                      }
                     >
+                      {exp.type.includes('Aktif') && (
+                        <span className="relative flex h-1.5 w-1.5 mr-0.5">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                          <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500" />
+                        </span>
+                      )}
                       {exp.type}
                     </span>
                     <div className="flex items-center gap-1.5 text-xs" style={{ color: 'var(--color-text-muted)' }}>

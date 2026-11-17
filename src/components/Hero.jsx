@@ -31,7 +31,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
-            Lulusan S1 ITK · Siap Berkontribusi
+            IT Support Intern @ PT Petrolab Services (Aktif)
           </div>
 
           {/* Headline */}
@@ -54,7 +54,7 @@ export default function Hero() {
             className="text-lg sm:text-xl font-semibold mb-5 od-animate-up"
             style={{ animationDelay: '100ms', color: 'var(--color-text-secondary)' }}
           >
-            Sistem Informasi · IT Support · Analisis Sistem & Web Developer
+            IT Support Intern · Sistem Informasi · Analisis Sistem & Web Developer
           </p>
 
           {/* Bio */}
@@ -64,9 +64,9 @@ export default function Hero() {
           >
             Lulusan S1 Sistem Informasi dari{' '}
             <strong style={{ color: 'var(--color-text-primary)' }}>Institut Teknologi Kalimantan</strong>{' '}
-            (IPK 3.63). Berpengalaman dalam Analisis Sistem, Basis Data, dan Pengembangan Aplikasi Web (
-            <span style={{ color: 'var(--color-brand)' }}>Laravel & Vue.js/React</span>
-            ), serta IT Support & Jaringan Lapangan.
+            (IPK 3.63), saat ini aktif sebagai{' '}
+            <strong style={{ color: 'var(--color-brand)' }}>IT Support Intern di PT Petrolab Services</strong>{' '}
+            (periode 16 November 2026 - Mei 2027). Berpengalaman dalam operasional IT Support & Jaringan, Analisis Proses Bisnis, Basis Data, serta Pengembangan Web.
           </p>
 
           {/* Meta chips */}

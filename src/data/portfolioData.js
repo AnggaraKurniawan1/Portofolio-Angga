@@ -2,14 +2,14 @@ export const portfolioData = {
   personal: {
     name: "Anggara Kurniawan",
     shortName: "Angga",
-    role: "Information Systems Specialist & Software Engineer",
+    role: "IT Support Intern & Information Systems Specialist",
     subRoles: [
+      "IT Support Intern @ Petrolab Services",
       "Analisis Sistem & Basis Data",
-      "IT Support & Jaringan",
-      "Full-stack Web Developer",
-      "Data Analytics & UI/UX"
+      "IT Support & Infrastruktur Jaringan",
+      "Full-stack Web Developer"
     ],
-    bio: "Lulusan S1 Sistem Informasi Institut Teknologi Kalimantan (IPK 3.63) dengan fokus keahlian di bidang Analisis Sistem, Basis Data, IT Support, dan Pengembangan Aplikasi. Berpengalaman dalam perancangan aplikasi web enterprise (Laravel & Vue.js/React), konfigurasi router & switch jaringan lokal, serta pemodelan sistem informasi.",
+    bio: "Lulusan S1 Sistem Informasi Institut Teknologi Kalimantan (IPK 3.63), saat ini aktif sebagai IT Support Intern di PT Petrolab Services (mulai 16 November 2026). Berpengalaman dalam IT Support lapangan, pemeliharaan perangkat & jaringan lokal, analisis proses bisnis, serta pengembangan aplikasi web enterprise.",
     location: "Balikpapan, Kalimantan Timur, Indonesia",
     email: "anggarabppn@gmail.com",
     phone: "+62 878-7246-2520",
@@ -17,6 +17,7 @@ export const portfolioData = {
     github: "https://github.com/AnggaraKurniawan1",
     gpa: "3.63 / 4.00",
     availableForHire: true,
+    currentRole: "IT Support Intern @ PT Petrolab Services",
     cvPath: "./CV_Anggara_Kurniawan.pdf"
   },
 
@@ -137,6 +138,20 @@ export const portfolioData = {
   ],
 
   experiences: [
+    {
+      company: "PT Petrolab Services",
+      location: "Balikpapan, Kalimantan Timur",
+      role: "IT Support Intern",
+      period: "16 November 2026 - Mei 2027 (6 Bulan)",
+      type: "Internship (Aktif)",
+      description: "Menjalankan program magang IT Support selama 6 bulan untuk mengelola dan memelihara operasional infrastruktur teknologi informasi, perangkat keras/lunak, serta dukungan teknis pengguna di lingkungan laboratorium dan perkantoran.",
+      tasks: [
+        "Melakukan pemeliharaan rutin, instalasi, dan troubleshooting perangkat keras (PC, printer, scanner) dan sistem operasi kerja.",
+        "Mendukung keandalan jaringan lokal (LAN/Wi-Fi), konfigurasi konektivitas kerja, dan akses sistem internal perusahaan.",
+        "Memberikan bantuan teknis (helpdesk & on-site IT support) kepada karyawan dan staf laboratorium untuk memastikan kelancaran operasional harian.",
+        "Membantu pencatatan inventaris aset IT, dokumentasi penanganan kendala sistem, dan prosedur backup data operasional."
+      ]
+    },
     {
       company: "Pandara Sports",
       location: "Balikpapan Selatan, Kalimantan Timur",
