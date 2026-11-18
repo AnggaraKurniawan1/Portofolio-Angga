@@ -1,6 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { GraduationCap, BookOpen, Database, Network, CheckCircle2, FileText } from 'lucide-react';
+import { GraduationCap, BookOpen, Database, Network, CheckCircle2 } from 'lucide-react';
 
 const pillars = [
   {
@@ -174,17 +174,15 @@ export default function About() {
                 style={{ borderTop: '1px solid var(--color-border)' }}
               >
                 <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>
-                  Dokumen resmi:
+                  Status Akademik:
                 </span>
-                <a
-                  href={personal.cvPath}
-                  download="CV_Anggara_Kurniawan.pdf"
+                <span
                   className="inline-flex items-center gap-1.5 text-xs font-semibold"
                   style={{ color: 'var(--color-brand)' }}
                 >
-                  <FileText className="w-3.5 h-3.5" />
-                  Unduh CV (PDF)
-                </a>
+                  <CheckCircle2 className="w-3.5 h-3.5" style={{ color: '#10B981' }} />
+                  Lulusan Resmi S1 ITK
+                </span>
               </div>
             </div>
           </div>

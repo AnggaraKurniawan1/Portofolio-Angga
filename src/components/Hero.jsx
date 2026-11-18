@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Download, Mail, MapPin, Award, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, Award, CheckCircle2 } from 'lucide-react';
 import { GithubIcon, WhatsAppIcon } from './Icons';
 import { portfolioData } from '../data/portfolioData';
 
@@ -108,15 +108,14 @@ export default function Hero() {
               Hubungi via WhatsApp
             </a>
             <a
-              href={personal.cvPath}
-              download="CV_Anggara_Kurniawan.pdf"
+              href={`mailto:${personal.email}`}
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-od text-sm font-medium transition-colors"
               style={{ color: 'var(--color-text-muted)' }}
               onMouseEnter={e => e.currentTarget.style.color = 'var(--color-brand)'}
               onMouseLeave={e => e.currentTarget.style.color = 'var(--color-text-muted)'}
             >
-              <Download className="w-4 h-4" />
-              Unduh CV
+              <Mail className="w-4 h-4" />
+              Kirim Email
             </a>
           </div>
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X, Download } from 'lucide-react';
+import { Moon, Sun, Menu, X, Mail } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function Navbar({ darkMode, setDarkMode }) {
@@ -89,12 +89,11 @@ export default function Navbar({ darkMode, setDarkMode }) {
               }
             </button>
             <a
-              href={portfolioData.personal.cvPath}
-              download="CV_Anggara_Kurniawan.pdf"
+              href="#contact"
               className="od-btn-primary text-[13px]"
             >
-              <Download className="w-3.5 h-3.5" />
-              Download CV
+              <Mail className="w-3.5 h-3.5" />
+              Hubungi Saya
             </a>
           </div>
 
@@ -139,13 +138,12 @@ export default function Navbar({ darkMode, setDarkMode }) {
             ))}
             <div className="pt-3 mt-1" style={{ borderTop: '1px solid var(--color-border)' }}>
               <a
-                href={portfolioData.personal.cvPath}
-                download="CV_Anggara_Kurniawan.pdf"
+                href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="od-btn-primary w-full justify-center"
               >
-                <Download className="w-4 h-4" />
-                Download CV
+                <Mail className="w-4 h-4" />
+                Hubungi Saya
               </a>
             </div>
           </div>
